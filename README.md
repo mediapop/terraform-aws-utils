@@ -32,9 +32,9 @@ output "letters" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| if | The condition. | boolean\|number | - | yes |
-| then | Value when true | any | - | yes |
-| else | Value when false | any | - | yes |
+| if | The condition. | string | - | yes |
+| then | Value when true | list | - | yes |
+| else | Value when false | list | - | yes |
 
 ## Outputs
 

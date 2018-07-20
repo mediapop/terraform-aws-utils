@@ -3,10 +3,12 @@ variable "if" {
 }
 
 variable "then" {
+  type        = "list"
   description = "When false this gets returned. must be of the same type as else."
 }
 
 variable "else" {
+  type        = "list"
   description = "When true this gets returned, must be of the same type as then."
 }
 
