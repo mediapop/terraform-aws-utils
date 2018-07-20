@@ -13,13 +13,13 @@ variable "else" {
 }
 
 locals {
-  test = {
-    condition = "${var.if}"
+  condition = "${var.if}"
+  branch = {
     then      = "${var.then}"
     else      = "${var.else}"
   }
 
-  test_result = "${local.test[lookup(local.test, "condition") ? "then" : "else"]}"
+  test_result = "${local.branch[local.condition ? "then" : "else"]}"
 }
 
 output "result" {
